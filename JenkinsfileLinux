@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    tools{
+        dotnetsdk 'dotnet'
+    }
+
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+        DOTNET_CLI_HOME = "/tmp/DOTNET_CLI_HOME"
+    }
+
+    stages {
+        stage('Tests') {
+            steps {
+                sh returnStatus: true, script: "dotnet test \"${workspace}/SeleniumPractice.sln\" --logger \"nunit;LogFileName=results.xml\""
+                nunit failIfNoResults: true, testResultsPattern: '**/results.xml'
+            }
+        }
+    }
+}
+
+
