@@ -37,4 +37,6 @@
   <ItemGroup>
     <Folder Include="BasicPractices\GlobalsQa\TestCases\LastStep\" />
   </ItemGroup>
+
+  <RuntimeHostConfigurationOption Include="System.Globalization.Invariant" Value="true" />
 </Project>
