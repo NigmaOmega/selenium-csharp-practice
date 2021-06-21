@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
+    
   </PropertyGroup>
   <ItemGroup>
     <None Remove="BasicPractices\SeleniumEasy\Resource\DataTableDownload.csv" />
@@ -38,5 +39,5 @@
     <Folder Include="BasicPractices\GlobalsQa\TestCases\LastStep\" />
   </ItemGroup>
 
-  <RuntimeHostConfigurationOption Include="System.Globalization.Invariant" Value="true" />
+
 </Project>
