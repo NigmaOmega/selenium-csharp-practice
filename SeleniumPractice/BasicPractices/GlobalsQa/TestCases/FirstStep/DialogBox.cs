@@ -95,7 +95,7 @@ namespace SeleniumPractice.BasicPractices.GlobalsQa.TestCases.FirstStep
         [Test]
         public void CreateNewUserWithInvalidEmail_ErrorMessage()
         {
-            dialogBoxPage.CreateNewUser(DataGenerator.GenerateString(3), DataGenerator.GenerateString(10), DataGenerator.GenerateString(7));
+            dialogBoxPage.CreateNewUser("abc", "abcqwertyu", "adfrwds");
             dialogBoxPage.VerifyErrorMessage("eg. ui@jquery.com");
         }
     }

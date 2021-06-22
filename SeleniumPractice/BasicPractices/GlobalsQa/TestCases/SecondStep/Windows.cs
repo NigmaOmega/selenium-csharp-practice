@@ -17,7 +17,7 @@ namespace SeleniumPractice.BasicPractices.GlobalsQa.TestCases.SecondStep
         [Test]
         public void OpenNewWindows_Successfully()
         {
-            string newWindowsUrl = "https://www.globalsqa.com/demo-site/frames-and-windows#";
+            string newWindowsUrl = "https://www.globalsqa.com/demo-site/frames-and-windows/#";
             windowsPage.OpenNewWindow();
             windowsPage.VerifyNewWindowIsCreated(newWindowsUrl);
         }

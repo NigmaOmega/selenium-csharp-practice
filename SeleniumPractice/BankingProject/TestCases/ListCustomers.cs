@@ -7,6 +7,7 @@ using System.Text;
 
 namespace SeleniumPractice.Demo.BankingProject.TestCases
 {
+    [Category("Bank Project")]
     class ListCustomers : BaseTest
     {
         ListCustomersPage listCustomersPage;
