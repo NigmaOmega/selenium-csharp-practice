@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Tests') {
             steps {
-                bat returnStatus: true, script: "dotnet test \"${workspace}/SeleniumPractice.sln\" --filter TestCategory="Bank Project" --logger \"nunit;LogFileName=results.xml\""
+                bat returnStatus: true, script: "dotnet test \"${workspace}/SeleniumPractice.sln\" --filter TestCategory=\"Bank Project\" --logger \"nunit;LogFileName=results.xml\""
                 nunit failIfNoResults: true, testResultsPattern: '**/results.xml'
             }
         }
