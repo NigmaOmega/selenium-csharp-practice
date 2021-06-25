@@ -9,7 +9,7 @@ pipeline {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
         DOTNET_CLI_HOME = "/tmp/DOTNET_CLI_HOME"
-        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: 1
+        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 1
     }
 
     stages {
