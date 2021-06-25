@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 namespace SeleniumPractice
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.Fixtures)]
+    [Parallelizable(ParallelScope.Self)]
     public class BaseTest
     {
         protected IWebDriver driver;

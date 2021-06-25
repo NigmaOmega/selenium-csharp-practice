@@ -13,6 +13,7 @@ namespace SeleniumPractice.SeleniumEasy.PageObjectModel
                 throw new System.Exception("The page URL of PageObjectModel is not set!");
             }
             driver.Navigate().GoToUrl(pageUrl);
+            driver.Sleep(20000);
         }
     }
 }
