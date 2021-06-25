@@ -13,10 +13,12 @@ namespace SeleniumPractice
         public static IWebDriver InitDriver()
         {
             var isGrid = config.IsSeleniumGrid;
+            
             IWebDriver driver;
             if (isGrid)
             {
-                driver = InitGridDriver();
+                string gridHubUri = config.GridHubUri;
+                driver = InitGridDriver(gridHubUri);
             }
             else
             {
@@ -50,18 +52,18 @@ namespace SeleniumPractice
             return new ChromeDriver(chromeOptions);
         }
 
-        private static IWebDriver InitGridDriver()
+        private static IWebDriver InitGridDriver(string gridHubUri)
         {
             switch (config.Browser)
             {
                 case "Chrome":
-                    return InitChromeGridDriver();
+                    return InitChromeGridDriver(gridHubUri);
                 default:
-                    return InitChromeGridDriver();
+                    return InitChromeGridDriver(gridHubUri);
             }
         }
 
-        private static IWebDriver InitChromeGridDriver()
+        private static IWebDriver InitChromeGridDriver(string gridHubUri)
         {
             ChromeOptions options = new ChromeOptions();
             if (config.IsHeadless)
@@ -69,7 +71,7 @@ namespace SeleniumPractice
                 options.AddArgument("--headless");
             }
 
-            var driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub/"), options);
+            var driver = new RemoteWebDriver(new Uri(gridHubUri), options);
 
 
             return driver;
