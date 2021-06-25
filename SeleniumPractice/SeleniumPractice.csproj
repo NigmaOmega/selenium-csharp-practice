@@ -27,7 +27,7 @@
     <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.5.0-alpha0003" />
     <PackageReference Include="Selenium.WebDriver" Version="4.0.0-beta2" />
     <PackageReference Include="NunitXml.TestLogger" Version="3.0.97" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="91.0.4472.10100" />
     <PackageReference Include="SpecFlow" Version="3.8.14" />
     <PackageReference Include="TextCopy" Version="4.3.0" />
   </ItemGroup>
