@@ -37,7 +37,7 @@ namespace SeleniumPractice
                 case "Chrome":
                     return InitNormalChromeDriver();
                 case "Firefox":
-                    return InitNormalFireFoxDriver();
+                    return InitNormalFirefoxDriver();
 
                 default:
                     return InitNormalChromeDriver();
