@@ -14,6 +14,7 @@ namespace SeleniumPractice.Demo.BankingProject.TestCases
         string errorMessage = "Please fill out this field.";
 
 
+
         [SetUp]
         public void ClassSetUp() {
             var managerPage = new ManagerPage(driver);

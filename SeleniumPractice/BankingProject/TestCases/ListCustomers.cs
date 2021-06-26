@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium.Html5;
 using SeleniumPractice.AdvancePractices.BankingProject.PageObjectModel;
 using SeleniumPractice.Demo.BankingProject.Model;
 using System;
@@ -19,7 +20,6 @@ namespace SeleniumPractice.Demo.BankingProject.TestCases
         {
             listCustomersPage = new ListCustomersPage(driver);
             listCustomersPage.GoTo();
-            driver.DeleteStorage();
         }
 
         [Test]

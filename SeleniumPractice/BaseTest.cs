@@ -16,6 +16,12 @@ namespace SeleniumPractice
             driver = SeleniumHelper.InitDriver();
         }
 
+        [TearDown]
+        public void CleanDriver() {
+            driver.DeleteStorage();
+            driver.Navigate().Refresh();
+        }
+
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
